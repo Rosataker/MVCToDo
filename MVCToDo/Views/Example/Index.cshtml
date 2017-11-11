@@ -1,0 +1,29 @@
+﻿@model MVCToDo.Models.Todo
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" id='datetimepicker4' />
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap-datetimepicker")
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker4').datetimepicker({
+                locale: 'zh-tw'
+            });
+        });
+    </script>
+}
